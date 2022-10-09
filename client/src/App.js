@@ -1,16 +1,21 @@
-import Home from "./pages/Home.js"
+import Container from "react-bootstrap/Container"
+import Image from "react-bootstrap/Image"
 import './App.css';
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 function App() {
   return (
-    <div className="App">
-      <Router>
-        <Routes>
-          <Route path="" element={<Home/>}/>
-        </Routes>
-      </Router>
-    </div>
+    <Container style={{textAlign: 'left'}}>
+      <Container style={{backgroundColor: 'lightgray', textAlign: 'left'}}>
+        <h5>Media Library</h5>
+      </Container>
+        <Container style={{display: 'flex'}}>
+        <Image width={300} height={300} src="https://peach418.s3.amazonaws.com/Peach.jpg"/>
+        <Container style={{padding: '.5rem', marginLeft: '.5rem'}}>
+            <h2>Peach Friend</h2>
+            <p>This lovely peach was picked from a house and had something special to show the people.</p>
+        </Container>
+      </Container>
+    </Container>
   );
 }
 
