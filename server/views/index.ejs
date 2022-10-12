@@ -1,11 +1,34 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css'
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"/>
+    <title>Brandon's Backyard Fruit</title>
   </head>
   <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <img src="data:image/png;base64,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">
+      <a class="navbar-brand" href="#">Brandon's Backyard Produce</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <div class="container" style="margin: 1rem; display: flex;">
+      <img style="width: 300px; height: 300px; margin-right: 3rem;" src="https://peach418.s3.amazonaws.com/Peach.jpg"/>
+      <div style="display: inline;">
+        <h1>Peach Friend</h1>
+        <p>It was a nice sunny afternoon and the peach trees were ready to be picked. This peach was among the many freshly picked peach that 
+          morning and came with something special.</p>
+      </div>
+    </div>
   </body>
 </html>
